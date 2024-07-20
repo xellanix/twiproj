@@ -6,16 +6,16 @@
 3. Create a [`metadata.json` file](#page_facing_up-metadatajson-template).
 4. Twibbon is ready to use.
 
-## :file_folder: Folders and Files
+## :package: Folders and Files
 ### Nomenclature and Composition Mechanisms
 - Use alphanumeric characters, without spaces and any symbols.
 - For twibbon image files, the name must follow the format `layer{index}` followed by commonly used image file types, such as `.png`, `.jpg`, `.jpeg`. For example, `layer1.png`.
 - Replace `{index}` with a number indicating the composition order of the image. [See below for an example](#structure).
 - Index starts from 1.
-- Photo uploaded by users will be placed on the last layer, or on the layer where the index is passed ([see below for an example](#tanabata_tree-twibbon-layer-compositing)).
+- Photo uploaded by users will be placed on the last layer, or on the layer where the index is passed ([see below for an example](#jigsaw-twibbon-layer-compositing)).
 
 ### Structure
-- Let's say, I want to upload my twibbon named `mytwibbon` with 4 twibbon layers. Later, the user's photo will be placed on layer 4. So, the file and folder structure will be like this. ([See the layer composition](#tanabata_tree-twibbon-layer-compositing))
+- Let's say, I want to upload my twibbon named `mytwibbon` with 4 twibbon layers. Later, the user's photo will be placed on layer 4. So, the file and folder structure will be like this. ([See the layer composition](#jigsaw-twibbon-layer-compositing))
 ``` bash
 root
 ├── mytwibbon
@@ -28,7 +28,7 @@ root
 └── {other_twibbon}
 ```
 
-## :tanabata_tree: Twibbon Layer Compositing
+## :jigsaw: Twibbon Layer Compositing
 ``` bash
 canvas
 ├── layer1.png
