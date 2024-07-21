@@ -45,6 +45,7 @@ canvas
     "subtitle": "YOUR_SUBTITLE",   // null is allowed
     "width": 1080,    // TWIBBON_WIDTH (in px)
     "height": 1080    // TWIBBON_HEIGHT (in px)
+    "lastLayerIndex": 5   // The last {index} of twibbon file
 }
 ```
 
