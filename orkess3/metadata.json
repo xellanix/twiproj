@@ -3,5 +3,18 @@
     "subtitle": "The First Step to the New You",
     "width": 1080,
     "height": 1080,
-    "lastLayerIndex": 1
+    "lastLayerIndex": 1,
+    "caption": {
+        "template": "Hello, my name is <<NAME>> and I am <<AGE>> years old.",
+        "params": {
+            "NAME": {
+                "label": "Name",
+                "default": "[YOUR NAME]"
+            },
+            "AGE": {
+                "label": "Age",
+                "default": "[YOUR AGE]"
+            }
+        }
+    }
 }
