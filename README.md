@@ -42,12 +42,38 @@ canvas
 ``` js
 {
     "title": "YOUR_TITLE",
-    "subtitle": "YOUR_SUBTITLE",   // null is allowed
-    "width": 1080,    // TWIBBON_WIDTH (in px)
-    "height": 1080    // TWIBBON_HEIGHT (in px)
-    "lastLayerIndex": 5   // The last {index} of twibbon file
+    "subtitle": "YOUR_SUBTITLE",
+    "width": 1080,
+    "height": 1080,
+    "lastLayerIndex": 5,
+    "caption": {
+        "template": "Hello, my name is <<NAME>> and I am <<AGE>> years old.",
+        "params": {
+            "NAME": {
+                "label": "Name",
+                "default": "[YOUR NAME]"
+            },
+            "AGE": {
+                "label": "Age",
+                "default": "[YOUR AGE]"
+            }
+        }
+    }
 }
 ```
+
+Explanation:
+- `title`: The main title of the twibbon. In this example, the title is `YOUR_TITLE`.
+- `subtitle`: A secondary title or description for the twibbon. This field can also be set to `null` if no subtitle is needed. In this example, the subtitle is `YOUR_SUBTITLE`.
+- `width`: The width of the twibbon in pixels. Here, it is set to `1080` pixels.
+- `height`: The height of the twibbon in pixels. Similar to the width, it is set to `1080` pixels.
+- `lastLayerIndex`: Indicates the index of the last layer in the twibbon file. This helps to understand the layer stacking order. In this example, the last layer index is `5`.
+- `caption`: Contains the template for the caption text and the parameters that can be replaced within the caption. This field is **optional**, so you can define it or not, based on your needs.
+    - `template`: The template for the twibbon caption. It contains placeholders (in the format `<<PLACEHOLDER>>`) that will be replaced with actual values. Here, the template is `Hello, my name is <<NAME>> and I am <<AGE>> years old.`.
+    - `params`: Defines the placeholders and their attributes.
+        - `PLACEHOLDER`: The placeholder name. Based on the template, the first `PLACEHOLDER` should be `NAME` and the second should be `AGE`
+            - `label`: A descriptive label for the placeholder.
+            - `default`: The default value to be used if no other value is provided.
 
 ## :warning: Warning
 It is not recommended to use more than 3 composition layers (including user photo), as it may affect the drawing performance performed by the system.
